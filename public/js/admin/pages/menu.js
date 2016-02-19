@@ -242,13 +242,18 @@ define(['jquery', 'repos/menu-store', 'repos/menu', 'WeChatEditor', 'util', 'adm
         function submitMenu () {
             var $menus = Menu.all();
             var $data = {};
+            console.log('=====================')
+            console.log($menus)
+            console.log('=====================')
 
             for($id in $menus){
                 var $item = {
                     name: $menus[$id].name,
-                    type: $menus[$id]['type'] ? ($menus[$id]['type'] == 'url' ? 'view' : $menus[$id]['type']) : null,
+                    type: $menus[$id]['content']['type'] ? ($menus[$id]['content']['type'] == 'url' ? 'view' : $menus[$id]['content']['type']) : null,
                 };
-                $item['value'] = $menus[$id]['content'][$menus[$id]['type']];
+                console.log($item)
+                console.log($menus[$id]['content'][$menus[$id]['content']['type']])
+                $item['value'] = $menus[$id]['content'][$menus[$id]['content']['type']];
 
                 if (!$menus[$id].hasChild && !$item['value']) {
                     return error('请设置菜单 "'+$item.name+'" 的响应内容！');
@@ -262,7 +267,7 @@ define(['jquery', 'repos/menu-store', 'repos/menu', 'WeChatEditor', 'util', 'adm
                     $data[$id] = $item;
                 }
             }
-
+            console.log($data)
             MenuRepo.submitMenu($data, function(){
                 Menu.clean();
                 success('保存成功！');
