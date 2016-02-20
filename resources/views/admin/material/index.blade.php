@@ -122,10 +122,8 @@
 </script>
 <script type="text/template" id="article-item-template">
     <div class="col-xs-6 col-sm-3 media-card">
-        <a href="#" title="Claudio Bravo, antes su debut con el Barça en la Liga">
-            <span class="placeholder bg-vioce"></span>
-            <span class="icon ion-ios-volume-high"></span>
-            <!-- <span class="duration">03:15</span>-->
+        <a href="<%= content_url %>" target="_blank" title="">
+            <span class="title"><%= title %></span>
         </a>
     </div>
 </script>

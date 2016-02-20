@@ -22,7 +22,8 @@ class Kernel extends ConsoleKernel
         \App\Console\Commands\FanDetails::class,
         \App\Console\Commands\AllFan::class,
         \App\Console\Commands\FanInfo::class,
-                          ];
+        \App\Console\Commands\Material::class,
+    ];
 
     /**
      * Define the application's command schedule.
