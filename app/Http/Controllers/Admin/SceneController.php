@@ -22,7 +22,8 @@ class SceneController extends Controller
 
 	public function getIndex(Request $request)
 	{
-		return admin_view('scene.index');
+		$scenes = Scene::paginate(15);
+		return admin_view('scene.index', compact('scenes'));
 	}
 	public function create(Request $request, QRCode $qr)
 	{

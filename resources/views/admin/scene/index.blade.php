@@ -17,48 +17,14 @@
             </tr>
             </thead>
             <tbody>
+            @foreach($scenes as $scene)
             <tr>
                 <td>1</td>
                 <td>内容</td>
                 <td>内容</td>
                 <td>内容</td>
             </tr>
-            <tr>
-                <td>2</td>
-                <td>内容</td>
-                <td>内容</td>
-                <td>内容</td>
-            </tr>
-            <tr class="info">
-                <td>3</td>
-                <td>内容</td>
-                <td>内容</td>
-                <td>内容</td>
-            </tr>
-            <tr class="success">
-                <td>4</td>
-                <td>内容</td>
-                <td>内容</td>
-                <td>内容</td>
-            </tr>
-            <tr class="danger">
-                <td>5</td>
-                <td>内容</td>
-                <td>内容</td>
-                <td>内容</td>
-            </tr>
-            <tr class="warning">
-                <td>6</td>
-                <td>内容</td>
-                <td>内容</td>
-                <td>内容</td>
-            </tr>
-            <tr class="active">
-                <td>7</td>
-                <td>内容</td>
-                <td>内容</td>
-                <td>内容</td>
-            </tr>
+                @endforeach
             </tbody>
         </table>
         </div>
