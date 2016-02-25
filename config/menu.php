@@ -80,7 +80,7 @@ return [
                             'uri'   => 'reply',
                         ],
                          [
-                             'label' => '客服管理',
+                             'label' => '场景管理',
                              'uri'   => 'staff',
                          ],
                     ],

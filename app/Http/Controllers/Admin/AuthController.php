@@ -53,6 +53,7 @@ class AuthController extends Controller
             return redirect($request->get('redirect', admin_url('/')));
         }
 
+	    account()->chose(2);
         return redirect()->back()->withInput($request->except('password'))->withErrors([
                 'name' => '用户名或密码错误！',
                                                                                                ]);
