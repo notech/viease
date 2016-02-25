@@ -41,6 +41,7 @@ Route::group($admin, function () {
             'message' => 'MessageController',
             'reply' => 'ReplyController',
             'upload' => 'UploadController',
+            'scene' => 'SceneController',
         ]);
     });
 });

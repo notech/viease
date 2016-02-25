@@ -1,4 +1,4 @@
-<?php namespace App\Http\Controllers;
+<?php namespace App\Http\Controllers\Admin;
 
 /**
  * Created by Cc <admin@notech.net>.
@@ -8,6 +8,8 @@
  * File: SceneController.php
  */
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
 use App\Models\Relation;
 use App\Models\Scene;
 
@@ -17,6 +19,11 @@ use Overtrue\Wechat\QRCode;
 
 class SceneController extends Controller
 {
+
+	public function getIndex(Request $request)
+	{
+		return admin_view('scene.index');
+	}
 	public function create(Request $request, QRCode $qr)
 	{
 		$max_scene_id = Scene::maxSceneId();

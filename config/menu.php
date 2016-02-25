@@ -81,7 +81,7 @@ return [
                         ],
                          [
                              'label' => '场景管理',
-                             'uri'   => 'staff',
+                             'uri'   => 'scene',
                          ],
                     ],
                 ],
