@@ -10,19 +10,19 @@
         <table class="table table-striped table-hover ">
             <thead>
             <tr>
-                <th>#</th>
-                <th>列头</th>
-                <th>列头</th>
-                <th>列头</th>
+                <th>场景id</th>
+                <th>场景名称</th>
+                <th>场景标示</th>
+                <th>二维码地址</th>
             </tr>
             </thead>
             <tbody>
             @foreach($scenes as $scene)
             <tr>
-                <td>1</td>
-                <td>内容</td>
-                <td>内容</td>
-                <td>内容</td>
+                <td>{{$scene->scene_id}}</td>
+                <td>{{$scene->scene_name}}</td>
+                <td>{{$scene->scene_sid}}</td>
+                <td><img src="{{$scene->scene_code}}" width="80px" height="80px"></td>
             </tr>
                 @endforeach
             </tbody>

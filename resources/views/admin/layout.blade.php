@@ -19,7 +19,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>后台管理</title>
+  <title>后台</title>
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <meta name="keywords" content="overtrue,bootstrap, bootstrap theme" />
   <meta name="description" content="a bootstrap theme made by overtrue." />
@@ -46,7 +46,7 @@
         <div class="table-row">
           <div class="left table-cell">
             <div class="logo">
-              <a href="{{ admin_url('/') }}"><img src="{{asset('img/logo.svg')}}" alt=""></a>
+              <a href="{{ admin_url('/') }}">这是后台</a>
             </div>
           </div>
           <div class="right table-cell">

@@ -7,6 +7,7 @@ requirejs.config({
     //默认情况下模块所在目录为 /js
     baseUrl: '/js',
 
+    waitSeconds: 200,
     //这里设置的路径是相对与 baseUrl 的，不要包含.js
     paths: {
         // dirs
@@ -16,7 +17,7 @@ requirejs.config({
 
         // base modules
         bootstrap:'bootstrap.min',
-        jquery: '//cdn.bootcss.com/jquery/2.1.4/jquery.min',
+        jquery: 'jquery.min',
         underscore: 'underscore-min',
         fastclick: 'fastclick.min',
         relocator: 'relocator-1.0.1.min',
