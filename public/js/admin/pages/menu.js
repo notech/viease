@@ -253,7 +253,7 @@ define(['jquery', 'repos/menu-store', 'repos/menu', 'WeChatEditor', 'util', 'adm
                 };
                 console.log($item)
                 console.log($menus[$id]['content'][$menus[$id]['content']['type']])
-                $item['value'] = $menus[$id]['content'][$menus[$id]['content']['type']];
+                $item['value'] = $menus[$id]['content'][$menus[$id]['content']['type']] ? $menus[$id]['content'][$menus[$id]['content']['type']] : $menus[$id]['content']['media_id'];
 
                 if (!$menus[$id].hasChild && !$item['value']) {
                     return error('请设置菜单 "'+$item.name+'" 的响应内容！');

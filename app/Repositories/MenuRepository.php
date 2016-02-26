@@ -160,11 +160,14 @@ class MenuRepository
     {
         return array_map(function ($menu) {
 
-            $mediaId = $this->eventRepository->getEventByKey($menu['key'])->value;
+	        if(strpos($menu['key'], 'MEDIA') !== false){
+		        $mediaId = $this->eventRepository->getEventByKey($menu['key'])->value;
+		        dd($mediaId);
+		        $menu['material'] = $this->materialRepository->getMaterialByMediaId($mediaId);
 
-            $menu['material'] = $this->materialRepository->getMaterialByMediaId($mediaId);
+		        return $menu;
+	        }
 
-            return $menu;
         }, $menus);
     }
 

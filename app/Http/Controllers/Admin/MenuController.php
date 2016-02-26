@@ -48,7 +48,7 @@ class MenuController extends Controller
     public function getLists()
     {
         $menus = $this->menuRepository->lists($this->account()->id)->toArray();
-
+	    return $menus;
         return $this->menuRepository->withMaterials($menus);
     }
 

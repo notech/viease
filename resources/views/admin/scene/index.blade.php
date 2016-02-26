@@ -30,6 +30,7 @@
             </tbody>
         </table>
         </div>
+        {!! $scenes->render() !!}
     </div>
 </div>
 
