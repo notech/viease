@@ -2,7 +2,9 @@
 @section('content')
 <div class="console-content">
     <div class="page-header">
-        <h2 id="nav">场景管理</h2>
+        <h2 id="nav">场景管理
+            <div class="pull-right"><button class="btn btn-success" href="#new-scene-modal" data-toggle="modal" data-target="#new-scene-modal" title="添加场景">添加场景</button></div>
+        </h2>
     </div>
     <!-- Tab panes -->
     <div class="well row">
@@ -29,6 +31,39 @@
         </table>
         </div>
     </div>
+</div>
+
+<div class="modal" id="new-scene-modal">
+    <form id="new-scene" action="" method="post" class="form-horizontal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">添加分组</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <label for="group-vname" class="col-md-3 control-label">场景命名：</label>
+                        <div class="col-md-6">
+                            <input type="text" id="name" name="name" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="group-vname" class="col-md-3 control-label">场景：</label>
+                        <div class="col-md-6">
+                            <input type="text" id="scene" name="scene" class="form-control">
+                        </div>
+                    </div>
+                    <input type="text" id="vname" name="vname" value="shop" class="form-control hidden">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-primary submit-group">确认</button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>
 
 <script type="text/plain" class="form-template">
@@ -88,6 +123,6 @@
 
 @section('js')
 <script>
-    require(['pages/reply'])
+    require(['pages/scene'])
 </script>
 @stop
